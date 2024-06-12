@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".GameFragment">
+
+    <data>
+        <variable
+            name="game"
+            type="android.example.flamesapp.GameFragment.Game" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/gradient_background"
+        >
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="9dp"
+            android:layout_height="20dp"
+            android:fontFamily="@font/jetbrains_mono_extrabold"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="."
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/jetbrains_mono_extrabold"
+                android:visibility="visible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="172dp"
+            android:fontFamily="@font/hellborne"
+            android:text="Enter Your Names"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name1InputLayout"
+            android:layout_width="326dp"
+            android:layout_height="95dp"
+            android:layout_marginTop="276dp"
+            android:fontFamily="@font/jetbrains_mono_extrabold"
+            android:hint="Enter Name 1"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:helperText="Enter Your Name or Your Crush's Name"
+            app:helperTextEnabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.505"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name1EditText"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:fontFamily="@font/jetbrains_mono_extrabold"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/name2InputLayout"
+            android:layout_width="326dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="58dp"
+            android:fontFamily="@font/jetbrains_mono_extrabold"
+            android:hint="Enter Name 2"
+            android:textColor="#000000"
+            android:textColorHint="#000000"
+            app:helperText="Enter Your Name or Your Crush's Name"
+            app:helperTextEnabled="true"
+            app:layout_constraintBottom_toTopOf="@+id/heartAnimation"
+            app:layout_constraintEnd_toEndOf="@+id/name1InputLayout"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/name1InputLayout"
+            app:layout_constraintTop_toBottomOf="@+id/name1InputLayout"
+            app:layout_constraintVertical_bias="0.0">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/name2EditText"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:fontFamily="@font/jetbrains_mono_extrabold"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textColor="#000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/heartAnimation"
+            android:layout_width="207dp"
+            android:layout_height="162dp"
+            android:layout_marginBottom="76dp"
+            android:clickable="true"
+            android:contentDescription="Click to check match"
+            android:focusable="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:lottie_fileName="heart_btn_anim_new_light.json" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
